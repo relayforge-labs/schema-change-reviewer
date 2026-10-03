@@ -20,7 +20,7 @@ def load_config():
 
 def run(text):
     cfg = load_config()
-    payload = {"model": cfg.get("OPENAI_MODEL", 'chat-default'),
+    payload = {"model": cfg.get("OPENAI_MODEL", 'gpt-6-astra'),
                "messages": [{"role": "system", "content": "Perform schema change review. Return concise JSON for human review."},
                             {"role": "user", "content": text}],
                "max_tokens": 256, "temperature": 0}
